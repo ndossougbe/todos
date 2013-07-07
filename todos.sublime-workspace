@@ -8,38 +8,63 @@
 	"buffers":
 	[
 		{
-			"file": "readme.md",
+			"contents": "\n    alter table DailySchedule \n        drop \n        foreign key FK547FDBB030B8B7CD\n\n    alter table DailySchedule \n        drop \n\n        foreign key FK547FDBB03D8D589F\n\n    drop table if exists DailySchedule\n    drop table if exists User\n\n    create table DailySchedule (\n        day integer not null,\n        end time,\n        start time,\n        user_username varchar(255) not null,\n        primary key (day, user_username)\n    )\n\n    create table User (\n        username varchar(255) not null,\n        firstname varchar(255),\n        lastname varchar(255),\n        defaultView integer not null,\n        primary key (username)\n    )\n\n    alter table DailySchedule \n        add index FK547FDBB030B8B7CD (user_username), \n        add constraint FK547FDBB030B8B7CD \n        foreign key (user_username) \n        references User (username)\n\n    alter table DailySchedule \n        add index FK547FDBB03D8D589F (day), \n        add constraint FK547FDBB03D8D589F \n        foreign key (day) \n        references User (username)\n",
+			"file": "/E/Projects/agendaclp/webservices/clpws-schema.sql",
+			"file_size": 1022,
+			"file_write_time": 130160645182703689,
 			"settings":
 			{
-				"buffer_size": 107,
+				"buffer_size": 1022,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "index.html",
+			"contents": "Package Control Messages\n========================\n\nLaTeXTools:\n----------\n\n  LaTeXTools Plugin version 2013-06-18 changelog:\n  \n  I'm back! Finally, I anticipate having some spare time to work on LaTeXTools! This will be\n  the first of hopefully many updates! Thank you for your continued support and PATIENCE :)\n  \n  New features:\n  \n  Bugs fixed:\n  - Basic support for biblatex bibliographies (contributed by Jeremy Jay)\n  \n  \n  - When jumping to PDF using the keybinding (C-l,j), honor the\n    \"keep_focus\" setting and the focus toggle.\n  \n  - Added \"/opt/local/bin\" path on OSX. Note: this is a temporary fix; I\n    am planning a slight refactoring of build configuration that will\n    hopefully give greater flexibility.\n  \n    \n",
 			"settings":
 			{
-				"buffer_size": 2707,
-				"line_ending": "Unix"
+				"buffer_size": 734,
+				"line_ending": "Windows",
+				"name": "Package Control Messages",
+				"scratch": true
 			}
 		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 104.0,
+		"height": 380.0,
 		"selected_items":
 		[
+			[
+				"ssxml",
+				"Set Syntax: XML"
+			],
+			[
+				"ssx",
+				"Set Syntax: XML"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"remo",
+				"BracketHighlighter: Remove Brackets"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
 			[
 				"space",
 				"Indentation: Convert to Spaces"
 			]
 		],
-		"width": 392.0
+		"width": 528.0
 	},
 	"console":
 	{
-		"height": 0.0
+		"height": 125.0
 	},
 	"distraction_free":
 	{
@@ -52,6 +77,24 @@
 	},
 	"file_history":
 	[
+		"/E/Projects/todos/readme.md",
+		"/E/Projects/todos/index.html",
+		"/E/System/Programs/eclipse/eclipse.ini",
+		"/E/Downloads/desmume-0.9.9-win64/README.WIN",
+		"/E/Downloads/desmume-0.9.9-win64/README",
+		"/E/System/Programs/binaries/test.bat",
+		"/E/Projects/agendaclp/webservices/pom.xml",
+		"/C/Users/Nicolas/.m2/repository/com/codahale/dropwizard/dropwizard-core/0.7.0-SNAPSHOT/dropwizard-core-0.7.0-SNAPSHOT.pom",
+		"/C/Users/Nicolas/.m2/repository/com/codahale/dropwizard/dropwizard-hibernate/0.7.0-SNAPSHOT/dropwizard-hibernate-0.7.0-SNAPSHOT.pom",
+		"/C/Users/Nicolas/.m2/repository/com/codahale/dropwizard/dropwizard-hibernate/0.7.0-SNAPSHOT/maven-metadata-local.xml",
+		"/C/Users/Nicolas/.m2/repository/com/codahale/dropwizard/dropwizard-parent/0.7.0-SNAPSHOT/maven-metadata-local.xml",
+		"/C/Users/Nicolas/.m2/repository/com/codahale/dropwizard/dropwizard-db/0.7.0-SNAPSHOT/maven-metadata-sonatype-nexus-snapshots.xml",
+		"/C/Users/Nicolas/.m2/repository/com/codahale/dropwizard/dropwizard-hibernate/maven-metadata-local.xml",
+		"/C/Users/Nicolas/.m2/repository/com/codahale/dropwizard/dropwizard-parent/0.7.0-SNAPSHOT/dropwizard-parent-0.7.0-SNAPSHOT.pom",
+		"/E/Projects/todos/bower_components/todomvc-common/base.css",
+		"/C/Users/Nicolas/AppData/Roaming/Sublime Text 2/Packages/User/Package Control.last-run",
+		"/E/Projects/todos/tmp.html",
+		"/C/Users/Nicolas/AppData/Roaming/Sublime Text 2/Packages/User/Package Control.sublime-settings",
 		"/E/System/Documents/Rainmeter/Skins/Enigma/Sidebar/Notes/Notes1/Notes1.ini",
 		"/E/System/Documents/Rainmeter/Skins/Enigma/Sidebar/_Sidebar2/Sidebar2.ini",
 		"/E/Documents/Rainmeter/Skins/Enigma/Sidebar/Notes/Notes.ini",
@@ -107,23 +150,159 @@
 			[
 				{
 					"buffer": 0,
-					"file": "readme.md",
+					"file": "/E/Projects/agendaclp/webservices/clpws-schema.sql",
 					"settings":
 					{
-						"buffer_size": 107,
+						"buffer_size": 1022,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								107,
-								107
+								131,
+								131
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+							"BracketHighlighterBusy": false,
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"buffer_scroll_name": "8ec27b25",
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/SQL/SQL.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -133,24 +312,67 @@
 				},
 				{
 					"buffer": 1,
-					"file": "index.html",
 					"settings":
 					{
-						"buffer_size": 2707,
+						"buffer_size": 734,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								993,
-								993
+								335,
+								335
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"word_wrap": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -211,11 +433,11 @@
 	},
 	"select_project":
 	{
-		"height": 0.0,
+		"height": 500.0,
 		"selected_items":
 		[
 		],
-		"width": 0.0
+		"width": 380.0
 	},
 	"show_minimap": true,
 	"show_open_files": false,
