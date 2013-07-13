@@ -73,4 +73,27 @@ todomvc.controller('TodoCtrl', function TodoCtrl($scope, $location, todoStorage,
 			todo.completed = completed;
 		});
 	};
+
+	$scope.displayImportExportModal = function() {
+    	$scope.shouldBeOpen = true;
+  		$scope.todoStr = angular.toJson(todos);    	
+	};
+
+  	$scope.closeModal = function () {
+    	$scope.shouldBeOpen = false;
+  	};
+
+  	$scope.import = function() {
+  		$scope.todos = todos = angular.fromJson($scope.todoStr);
+  		$scope.closeModal();
+  	}
+
+  	$scope.todoStr = ['item1', 'item2'];
+
+  	 $scope.modalOpts = {
+	    backdropFade: true,
+	    dialogFade:true
+	  };
+
 });
+
