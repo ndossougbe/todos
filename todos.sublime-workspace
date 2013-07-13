@@ -8,24 +8,67 @@
 	"buffers":
 	[
 		{
-			"contents": "\n    alter table DailySchedule \n        drop \n        foreign key FK547FDBB030B8B7CD\n\n    alter table DailySchedule \n        drop \n\n        foreign key FK547FDBB03D8D589F\n\n    drop table if exists DailySchedule\n    drop table if exists User\n\n    create table DailySchedule (\n        day integer not null,\n        end time,\n        start time,\n        user_username varchar(255) not null,\n        primary key (day, user_username)\n    )\n\n    create table User (\n        username varchar(255) not null,\n        firstname varchar(255),\n        lastname varchar(255),\n        defaultView integer not null,\n        primary key (username)\n    )\n\n    alter table DailySchedule \n        add index FK547FDBB030B8B7CD (user_username), \n        add constraint FK547FDBB030B8B7CD \n        foreign key (user_username) \n        references User (username)\n\n    alter table DailySchedule \n        add index FK547FDBB03D8D589F (day), \n        add constraint FK547FDBB03D8D589F \n        foreign key (day) \n        references User (username)\n",
-			"file": "/E/Projects/agendaclp/webservices/clpws-schema.sql",
-			"file_size": 1022,
-			"file_write_time": 130160645182703689,
+			"file": "/E/Projects/agendaclp/aclp-server/clpws-schema.sql",
 			"settings":
 			{
-				"buffer_size": 1022,
+				"buffer_size": 3146,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "Package Control Messages\n========================\n\nLaTeXTools:\n----------\n\n  LaTeXTools Plugin version 2013-06-18 changelog:\n  \n  I'm back! Finally, I anticipate having some spare time to work on LaTeXTools! This will be\n  the first of hopefully many updates! Thank you for your continued support and PATIENCE :)\n  \n  New features:\n  \n  Bugs fixed:\n  - Basic support for biblatex bibliographies (contributed by Jeremy Jay)\n  \n  \n  - When jumping to PDF using the keybinding (C-l,j), honor the\n    \"keep_focus\" setting and the focus toggle.\n  \n  - Added \"/opt/local/bin\" path on OSX. Note: this is a temporary fix; I\n    am planning a slight refactoring of build configuration that will\n    hopefully give greater flexibility.\n  \n    \n",
+			"file": "/E/Projects/ConnectionInsa.java",
 			"settings":
 			{
-				"buffer_size": 734,
+				"buffer_size": 1334,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "bower_components/todomvc-common/base.css",
+			"settings":
+			{
+				"buffer_size": 9673,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": ".gitignore",
+			"settings":
+			{
+				"buffer_size": 23,
 				"line_ending": "Windows",
-				"name": "Package Control Messages",
-				"scratch": true
+				"name": ".gitignore"
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 5145,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "<!DOCTYPE html>\n<html>\n\n  <head>\n    <meta charset='utf-8' />\n    <meta http-equiv=\"X-UA-Compatible\" content=\"chrome=1\" />\n    <meta name=\"description\" content=\"Todos : Todo manager using AngularJS and the local storage\" />\n\n    <link rel=\"stylesheet\" type=\"text/css\" media=\"screen\" href=\"stylesheets/stylesheet.css\">\n\n    <title>Todos</title>\n  </head>\n\n  <body>\n\n    <!-- HEADER -->\n    <div id=\"header_wrap\" class=\"outer\">\n        <header class=\"inner\">\n          <a id=\"forkme_banner\" href=\"https://github.com/ndossougbe/todos\">View on GitHub</a>\n\n          <h1 id=\"project_title\">Todos</h1>\n          <h2 id=\"project_tagline\">Todo manager using AngularJS and the local storage</h2>\n\n            <section id=\"downloads\">\n              <a class=\"zip_download_link\" href=\"https://github.com/ndossougbe/todos/zipball/master\">Download this project as a .zip file</a>\n              <a class=\"tar_download_link\" href=\"https://github.com/ndossougbe/todos/tarball/master\">Download this project as a tar.gz file</a>\n            </section>\n        </header>\n    </div>\n\n    <!-- MAIN CONTENT -->\n    <div id=\"main_content_wrap\" class=\"outer\">\n      <section id=\"main_content\" class=\"inner\">\n      	 <h3> <a href=\"todo.html\"><span class=\"octicon octicon-link\"></span>Go to the Todo Manager!</a></h3>\n\n      	 <p>Everything is in your browser and stays in your browser.</p>\n\n      	 <hr>\n\n        <h3>\n<a name=\"welcome-to-github-pages\" class=\"anchor\" href=\"#welcome-to-github-pages\"><span class=\"octicon octicon-link\"></span></a>Welcome to GitHub Pages.</h3>\n\n<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>\n\n<pre><code>$ cd your_repo_root/repo_name\n$ git fetch origin\n$ git checkout gh-pages\n</code></pre>\n\n<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>\n\n<h3>\n<a name=\"designer-templates\" class=\"anchor\" href=\"#designer-templates\"><span class=\"octicon octicon-link\"></span></a>Designer Templates</h3>\n\n<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>\n\n<h3>\n<a name=\"rather-drive-stick\" class=\"anchor\" href=\"#rather-drive-stick\"><span class=\"octicon octicon-link\"></span></a>Rather Drive Stick?</h3>\n\n<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>\n\n<h3>\n<a name=\"authors-and-contributors\" class=\"anchor\" href=\"#authors-and-contributors\"><span class=\"octicon octicon-link\"></span></a>Authors and Contributors</h3>\n\n<p>You can <a href=\"https://github.com/blog/821\" class=\"user-mention\">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href=\"https://github.com/defunkt\" class=\"user-mention\">@defunkt</a>), PJ Hyett (<a href=\"https://github.com/pjhyett\" class=\"user-mention\">@pjhyett</a>), and Tom Preston-Werner (<a href=\"https://github.com/mojombo\" class=\"user-mention\">@mojombo</a>) founded GitHub.</p>\n\n<h3>\n<a name=\"support-or-contact\" class=\"anchor\" href=\"#support-or-contact\"><span class=\"octicon octicon-link\"></span></a>Support or Contact</h3>\n\n<p>Having trouble with Pages? Check out the documentation at <a href=\"http://help.github.com/pages\">http://help.github.com/pages</a> or contact <a href=\"mailto:support@github.com\">support@github.com</a> and we’ll help you sort it out.</p>\n      </section>\n    </div>\n\n    <!-- FOOTER  -->\n    <div id=\"footer_wrap\" class=\"outer\">\n      <footer class=\"inner\">\n        <p class=\"copyright\">Todos maintained by <a href=\"https://github.com/ndossougbe\">ndossougbe</a></p>\n        <p>Published with <a href=\"http://pages.github.com\">GitHub Pages</a></p>\n      </footer>\n    </div>\n\n              <script type=\"text/javascript\">\n            var gaJsHost = ((\"https:\" == document.location.protocol) ? \"https://ssl.\" : \"http://www.\");\n            document.write(unescape(\"%3Cscript src='\" + gaJsHost + \"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E\"));\n          </script>\n          <script type=\"text/javascript\">\n            try {\n              var pageTracker = _gat._getTracker(\"UA-41650056-1\");\n            pageTracker._trackPageview();\n            } catch(err) {}\n          </script>\n\n\n  </body>\n</html>",
+			"settings":
+			{
+				"buffer_size": 5145,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "todo.html",
+			"settings":
+			{
+				"buffer_size": 2697,
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -64,7 +107,10 @@
 	},
 	"console":
 	{
-		"height": 125.0
+		"height": 125.0,
+		"history":
+		[
+		]
 	},
 	"distraction_free":
 	{
@@ -77,6 +123,8 @@
 	},
 	"file_history":
 	[
+		"/E/Projects/todos/todo.html~HEAD",
+		"/E/Projects/agendaclp/webservices/clpws-schema.sql",
 		"/E/Projects/todos/readme.md",
 		"/E/Projects/todos/index.html",
 		"/E/System/Programs/eclipse/eclipse.ini",
@@ -109,7 +157,7 @@
 	],
 	"find":
 	{
-		"height": 34.0
+		"height": 991.0
 	},
 	"find_in_files":
 	{
@@ -124,6 +172,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"<!doctype html>\n<html lang=\"en\" ng-app=\"todomvc\" data-framework=\"angularjs\">\n	<head>\n		<meta charset=\"utf-8\">\n		<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\">\n		<title>AngularJS • TodoMVC</title>\n		<link rel=\"stylesheet\" href=\"bower_components/todomvc-common/base.css\">\n		<style>[ng-cloak] { display: none; }</style>",
+			"<!doctype html>\n<html lang=\"en\" ng-app=\"todomvc\" data-framework=\"angularjs\">\n	<head>\n		<meta charset=\"utf-8\">\n		<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\">\n		<title>AngularJS • TodoMVC</title>\n		<link rel=\"stylesheet\" href=\"bower_components/todomvc-common/base.css\">\n		<style>[ng-cloak] { display: none; }</style>\n	</head>\n	<body>\n		<section id=\"todoapp\" ng-controller=\"TodoCtrl\">\n			<header id=\"header\">\n				<h1>todos</h1>\n				<form id=\"todo-form\" ng-submit=\"addTodo()\">\n					<input id=\"new-todo\" placeholder=\"What needs to be done?\" ng-model=\"newTodo\" autofocus>\n				</form>\n			</header>\n			<section id=\"",
+			"<!doctype html>\n<html lang=\"en\" ng-app=\"todomvc\" data-framework=\"angularjs\">\n	<head>\n		<meta charset=\"utf-8\">\n		<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\">\n		<title>• Todos •</title>\n		<link rel=\"stylesheet\" href=\"bower_components/todomvc-common/base.css\">\n		<style>[ng-cloak] { display: none; }</style>\n	</head>\n	<body>\n		<section id=\"todoapp\" ng-controller=\"TodoCtrl\">\n			<header id=\"header\">\n				<h1>todos</h1>\n				<form id=\"todo-form\" ng-submit=\"addTodo()\">\n					<input id=\"new-todo\" placeholder=\"What needs to be done?\" ng-model=\"newTodo\" autofocus>\n				</form>\n			</header>\n			<section id=\"main\" ng-show=\"todos.length\" ng-cloak>\n				<input id=\"toggle-all\" type=\"checkbox\" ng-model=\"allChecked\" ng-click=\"markAll(allChecked)\">\n				<label for=\"toggle-all\">Mark all as complete</label>\n				<ul id=\"todo-list\">\n					<li ng-repeat=\"todo in todos | filter:statusFilter\" ng-class=\"{completed: todo.completed, editing: todo == editedTodo}\">\n						<div class=\"view\">\n							<input class=\"toggle\" type=\"checkbox\" ng-model=\"todo.completed\">\n							<label ng-dblclick=\"editTodo(todo)\">{{todo.title}}</label>\n							<button class=\"destroy\" ng-click=\"removeTodo(todo)\"></button>\n						</div>\n						<form ng-submit=\"doneEditing(todo)\">\n							<input class=\"edit\" ng-model=\"todo.title\" todo-blur=\"doneEditing(todo)\" todo-focus=\"todo == editedTodo\">\n						</form>\n					</li>\n				</ul>\n			</section>\n			<footer id=\"footer\" ng-show=\"todos.length\" ng-cloak>\n				<span id=\"todo-count\"><strong>{{remainingCount}}</strong>\n					<ng-pluralize count=\"remainingCount\" when=\"{ one: 'item left', other: 'items left' }\"></ng-pluralize>\n				</span>\n				<ul id=\"filters\">\n					<li>\n						<a ng-class=\"{selected: location.path() == '/'} \" href=\"#/\">All</a>\n					</li>\n					<li>\n						<a ng-class=\"{selected: location.path() == '/active'}\" href=\"#/active\">Active</a>\n					</li>\n					<li>\n						<a ng-class=\"{selected: location.path() == '/completed'}\" href=\"#/completed\">Completed</a>\n					</li>\n				</ul>\n				<button id=\"clear-completed\" ng-click=\"clearCompletedTodos()\" ng-show=\"completedCount\">Clear completed ({{completedCount}})</button>\n			</footer>\n		</section>\n		<footer id=\"info\">\n			<p>Double-click to edit a todo</p>\n			<p>Heavily inspired from <a href=\"http://todomvc.com\">TodoMVC</a></p>\n		</footer>\n		<script src=\"bower_components/todomvc-common/base.js\"></script>\n		<script src=\"bower_components/angular/angular.js\"></script>\n		<script src=\"js/app.js\"></script>\n		<script src=\"js/controllers/todoCtrl.js\"></script>\n		<script src=\"js/services/todoStorage.js\"></script>\n		<script src=\"js/directives/todoFocus.js\"></script>\n		<script src=\"js/directives/todoBlur.js\"></script>\n	</body>\n</html>\n",
 			"assert",
 			"Arrow",
 			"Windows Key"
@@ -150,159 +201,53 @@
 			[
 				{
 					"buffer": 0,
-					"file": "/E/Projects/agendaclp/webservices/clpws-schema.sql",
+					"file": "/E/Projects/agendaclp/aclp-server/clpws-schema.sql",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1022,
+						"buffer_size": 3146,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								131,
-								131
+								1022,
+								1022
 							]
 						],
 						"settings":
 						{
-							"BracketHighlighterBusy": false,
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"bh_regions":
-							[
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close"
-							],
-							"buffer_scroll_name": "8ec27b25",
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"sublimelinter": true,
-							"sublimelinter_delay": 2,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": true,
-							"sublimelinter_gutter_marks_theme": "simple",
-							"sublimelinter_mark_style": "none",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
 							"syntax": "Packages/SQL/SQL.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 525.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/E/Projects/ConnectionInsa.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1334,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								314,
+								316
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -311,68 +256,163 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
+					"buffer": 2,
+					"file": "bower_components/todomvc-common/base.css",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 734,
+						"buffer_size": 9673,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								335,
-								335
+								469,
+								469
 							]
 						],
 						"settings":
 						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": ".gitignore",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 23,
+						"regions":
+						{
+						},
+						"selection":
+						[
 							[
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close"
-							],
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"word_wrap": true
+								23,
+								23
+							]
+						],
+						"settings":
+						{
+							"auto_name": ".gitignore",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5145,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4353,
+								4353
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5145,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5145,
+								5145
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 783.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "todo.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2697,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								952,
+								952
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -414,6 +454,7 @@
 		]
 	},
 	"menu_visible": true,
+	"project": "todos.sublime-project",
 	"replace":
 	{
 		"height": 62.0
@@ -424,6 +465,14 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"ind",
+				"index.html"
+			],
+			[
+				"css",
+				"bower_components\\todomvc-common\\base.css"
+			],
 			[
 				"in",
 				"index.html"
@@ -439,10 +488,24 @@
 		],
 		"width": 380.0
 	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
 	"side_bar_width": 150.0,
-	"status_bar_visible": true
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
 }
