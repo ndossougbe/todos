@@ -9,7 +9,9 @@ todomvc.factory('todoStorage', function () {
 
 	return {
 		get: function () {
-			return JSON.parse(localStorage.getItem(STORAGE_ID) || '[]');
+			var todos = JSON.parse(localStorage.getItem(STORAGE_ID) || '[]');
+			console.log(todos);
+			return todos;
 		},
 
 		put: function (todos) {
