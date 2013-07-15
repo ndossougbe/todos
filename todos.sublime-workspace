@@ -16,13 +16,10 @@
 			}
 		},
 		{
-			"contents": "import java.io.OutputStreamWriter;\nimport java.net.URL;\nimport java.net.HttpsURLConnection;\n\n//\"C:\\Program Files\\Java\\jdk1.7.0_21\\bin\\javac.exe\" ConnectionInsa.java\n//java ConnectionInsa gbetedosso q5xpySq8\n//http://superuser.com/questions/262799/how-to-launch-a-command-on-network-connection-disconnection\npublic class ConnectionInsa extends Parent implements Interface {\n	\n}ass ConnectionInsa {\n\n\n	public static void main(String[] args) throws Exception {\n		\n		if (args.length != 2) {\n			System.err.println(\"USAGE : java ConnectionInsa login motDePasse\");\n			System.exit(1);\n		}\n		\n		HttpsURLConnection  conn;\n		OutputStreamWriter out;\n		String post;\n		\n		post = \"auth_user=\"+args[0]+\"&fqdn=insa-lyon.fr&auth_pass=\"+args[1]+\"&rediurl=/\";\n		URL url = new URL(\"https://192.168.30.1:8001\");\n		conn = (HttpsURLConnection)(url.openConnection());\n		conn.setHostnameVerifier(new javax.net.ssl.HostnameVerifier(){\n \n	        public boolean verify(String hostname,\n	                javax.net.ssl.SSLSession sslSession) {\n	           /* if (hostname.equals(\"localhost\")) {\n	                return true;\n	            }*/\n	            System.out.println(\"hostname: \" + hostname);\n	            return true;\n	        }\n	    });\n		\n		conn.setDoOutput(true);\n		\n		out = new OutputStreamWriter(conn.getOutputStream());\n		out.write(post);\n		out.flush();\n		out.close();\n		\n		conn.getInputStream().close();\n	}\n}\n",
 			"file": "/E/Projects/ConnectionInsa.java",
-			"file_size": 1380,
-			"file_write_time": 130180538610057069,
 			"settings":
 			{
-				"buffer_size": 1394,
+				"buffer_size": 1334,
 				"line_ending": "Windows"
 			}
 		},
@@ -30,7 +27,7 @@
 			"file": "bower_components/todomvc-common/base.css",
 			"settings":
 			{
-				"buffer_size": 9733,
+				"buffer_size": 9673,
 				"line_ending": "Windows"
 			}
 		},
@@ -41,6 +38,14 @@
 				"buffer_size": 23,
 				"line_ending": "Windows",
 				"name": ".gitignore"
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 5145,
+				"line_ending": "Windows"
 			}
 		},
 		{
@@ -62,23 +67,7 @@
 			"file": "todo.html",
 			"settings":
 			{
-				"buffer_size": 4816,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "js/controllers/todoCtrl.js",
-			"settings":
-			{
-				"buffer_size": 2193,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "js/app.js",
-			"settings":
-			{
-				"buffer_size": 193,
+				"buffer_size": 2697,
 				"line_ending": "Windows"
 			}
 		}
@@ -86,17 +75,9 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 219.0,
+		"height": 380.0,
 		"selected_items":
 		[
-			[
-				"spac",
-				"Indentation: Convert to Spaces"
-			],
-			[
-				"tabs",
-				"Indentation: Convert to Tabs"
-			],
 			[
 				"ssxml",
 				"Set Syntax: XML"
@@ -122,7 +103,7 @@
 				"Indentation: Convert to Spaces"
 			]
 		],
-		"width": 512.0
+		"width": 528.0
 	},
 	"console":
 	{
@@ -142,12 +123,10 @@
 	},
 	"file_history":
 	[
-		"/E/Projects/todos/javascripts/main.js",
-		"/E/Projects/todos/bower_components/todomvc-common/base.js",
-		"/E/Projects/todos/index.html",
 		"/E/Projects/todos/todo.html~HEAD",
 		"/E/Projects/agendaclp/webservices/clpws-schema.sql",
 		"/E/Projects/todos/readme.md",
+		"/E/Projects/todos/index.html",
 		"/E/System/Programs/eclipse/eclipse.ini",
 		"/E/Downloads/desmume-0.9.9-win64/README.WIN",
 		"/E/Downloads/desmume-0.9.9-win64/README",
@@ -178,7 +157,7 @@
 	],
 	"find":
 	{
-		"height": 34.0
+		"height": 991.0
 	},
 	"find_in_files":
 	{
@@ -193,8 +172,6 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"main",
-			"clear-completed",
 			"<!doctype html>\n<html lang=\"en\" ng-app=\"todomvc\" data-framework=\"angularjs\">\n	<head>\n		<meta charset=\"utf-8\">\n		<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\">\n		<title>AngularJS • TodoMVC</title>\n		<link rel=\"stylesheet\" href=\"bower_components/todomvc-common/base.css\">\n		<style>[ng-cloak] { display: none; }</style>",
 			"<!doctype html>\n<html lang=\"en\" ng-app=\"todomvc\" data-framework=\"angularjs\">\n	<head>\n		<meta charset=\"utf-8\">\n		<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\">\n		<title>AngularJS • TodoMVC</title>\n		<link rel=\"stylesheet\" href=\"bower_components/todomvc-common/base.css\">\n		<style>[ng-cloak] { display: none; }</style>\n	</head>\n	<body>\n		<section id=\"todoapp\" ng-controller=\"TodoCtrl\">\n			<header id=\"header\">\n				<h1>todos</h1>\n				<form id=\"todo-form\" ng-submit=\"addTodo()\">\n					<input id=\"new-todo\" placeholder=\"What needs to be done?\" ng-model=\"newTodo\" autofocus>\n				</form>\n			</header>\n			<section id=\"",
 			"<!doctype html>\n<html lang=\"en\" ng-app=\"todomvc\" data-framework=\"angularjs\">\n	<head>\n		<meta charset=\"utf-8\">\n		<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\">\n		<title>• Todos •</title>\n		<link rel=\"stylesheet\" href=\"bower_components/todomvc-common/base.css\">\n		<style>[ng-cloak] { display: none; }</style>\n	</head>\n	<body>\n		<section id=\"todoapp\" ng-controller=\"TodoCtrl\">\n			<header id=\"header\">\n				<h1>todos</h1>\n				<form id=\"todo-form\" ng-submit=\"addTodo()\">\n					<input id=\"new-todo\" placeholder=\"What needs to be done?\" ng-model=\"newTodo\" autofocus>\n				</form>\n			</header>\n			<section id=\"main\" ng-show=\"todos.length\" ng-cloak>\n				<input id=\"toggle-all\" type=\"checkbox\" ng-model=\"allChecked\" ng-click=\"markAll(allChecked)\">\n				<label for=\"toggle-all\">Mark all as complete</label>\n				<ul id=\"todo-list\">\n					<li ng-repeat=\"todo in todos | filter:statusFilter\" ng-class=\"{completed: todo.completed, editing: todo == editedTodo}\">\n						<div class=\"view\">\n							<input class=\"toggle\" type=\"checkbox\" ng-model=\"todo.completed\">\n							<label ng-dblclick=\"editTodo(todo)\">{{todo.title}}</label>\n							<button class=\"destroy\" ng-click=\"removeTodo(todo)\"></button>\n						</div>\n						<form ng-submit=\"doneEditing(todo)\">\n							<input class=\"edit\" ng-model=\"todo.title\" todo-blur=\"doneEditing(todo)\" todo-focus=\"todo == editedTodo\">\n						</form>\n					</li>\n				</ul>\n			</section>\n			<footer id=\"footer\" ng-show=\"todos.length\" ng-cloak>\n				<span id=\"todo-count\"><strong>{{remainingCount}}</strong>\n					<ng-pluralize count=\"remainingCount\" when=\"{ one: 'item left', other: 'items left' }\"></ng-pluralize>\n				</span>\n				<ul id=\"filters\">\n					<li>\n						<a ng-class=\"{selected: location.path() == '/'} \" href=\"#/\">All</a>\n					</li>\n					<li>\n						<a ng-class=\"{selected: location.path() == '/active'}\" href=\"#/active\">Active</a>\n					</li>\n					<li>\n						<a ng-class=\"{selected: location.path() == '/completed'}\" href=\"#/completed\">Completed</a>\n					</li>\n				</ul>\n				<button id=\"clear-completed\" ng-click=\"clearCompletedTodos()\" ng-show=\"completedCount\">Clear completed ({{completedCount}})</button>\n			</footer>\n		</section>\n		<footer id=\"info\">\n			<p>Double-click to edit a todo</p>\n			<p>Heavily inspired from <a href=\"http://todomvc.com\">TodoMVC</a></p>\n		</footer>\n		<script src=\"bower_components/todomvc-common/base.js\"></script>\n		<script src=\"bower_components/angular/angular.js\"></script>\n		<script src=\"js/app.js\"></script>\n		<script src=\"js/controllers/todoCtrl.js\"></script>\n		<script src=\"js/services/todoStorage.js\"></script>\n		<script src=\"js/directives/todoFocus.js\"></script>\n		<script src=\"js/directives/todoBlur.js\"></script>\n	</body>\n</html>\n",
@@ -219,7 +196,7 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -257,15 +234,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1394,
+						"buffer_size": 1334,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								374,
-								374
+								314,
+								316
 							]
 						],
 						"settings":
@@ -284,15 +261,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9733,
+						"buffer_size": 9673,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								469,
+								469
 							]
 						],
 						"settings":
@@ -336,6 +313,33 @@
 				},
 				{
 					"buffer": 4,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5145,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4353,
+								4353
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
 					"semi_transient": false,
 					"settings":
 					{
@@ -357,13 +361,13 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 78.0,
+						"translation.y": 783.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 6,
 					"semi_transient": false,
 					"settings":
 					{
@@ -389,81 +393,26 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 7,
 					"file": "todo.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4816,
+						"buffer_size": 2697,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								885,
-								885
+								952,
+								952
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "js/controllers/todoCtrl.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2193,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 855.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "js/app.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 193,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -516,22 +465,6 @@
 		"height": 0.0,
 		"selected_items":
 		[
-			[
-				"main",
-				"javascripts\\main.js"
-			],
-			[
-				"app",
-				"js\\app.js"
-			],
-			[
-				"contr",
-				"js\\controllers\\todoCtrl.js"
-			],
-			[
-				"base",
-				"bower_components\\todomvc-common\\base.js"
-			],
 			[
 				"ind",
 				"index.html"
