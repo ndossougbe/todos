@@ -52,7 +52,7 @@
                 <button class="footer-button" ng-click="clearCompletedTodos()" ng-show="completedCount">Clear completed ({{completedCount}})</button>
             </footer>
 
-            <div>
+            <div ng-cloak>
                 <div modal="shouldBeOpen" close="closeModal()" options="modalOpts">
                     <div class="modal-header">
                         <h3>Import or export your TODO list</h3>
